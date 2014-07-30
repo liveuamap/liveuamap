@@ -6,7 +6,7 @@
 AddDefaultCharset UTF-8
 
 RewriteEngine On
-RewriteBase /dev/liveuamap_pub
+RewriteBase /
 
 DirectoryIndex index.php
 
