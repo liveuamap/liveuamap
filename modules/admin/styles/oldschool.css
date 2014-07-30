@@ -1,0 +1,36 @@
+﻿	.swfupload {
+		position: absolute;
+		z-index: 1;
+	}
+ #finding-nemo
+{
+    text-align:center;
+    vertical-align:middle;
+    height:135px;
+    display:none;
+}
+#shoot-walle
+{
+    text-align:center;
+    vertical-align:middle;
+    height:105px;
+    display:none;
+}
+#bigbang-theory{
+    text-align:center;
+    vertical-align:middle;
+    height:135px;
+    display:none;
+}
+.uploadedpics{
+margin:5px;
+border:1px solid #aaa;
+padding:5px;
+font-size:10pt;
+display:none;
+}
+
+.uploadedpics table{
+
+width:100%;
+}

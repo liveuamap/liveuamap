@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Segoe UI Semilight";
+    src: url('../fonts/segoeuisl.eot');
+    src: local('☺'), url('../fonts/segoeuisl.eot#iefix') format('embedded-opentype'), url('../fonts/segoeuisl.ttf') format('truetype'), url(../fonts/segoeuisl.woff) format('woff'), url(../fonts/segoeuisl.svg) format('svg'), url('../fonts/segoeuisl.pfb') format('pfb'), url('../fonts/segoeuisl.dfont') format('dfont'), url('../fonts/segoeuisl.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI Regular";
+    src: url('../fonts/segoeui.eot');
+    src: local('☺'), url('../fonts/segoeui.eot#iefix') format('embedded-opentype'), url('../fonts/segoeui.ttf') format('truetype'), url(../fonts/segoeui.woff) format('woff'), url(../fonts/segoeui.svg) format('svg'), url('../fonts/segoeui.pfb') format('pfb'), url('../fonts/segoeui.dfont') format('dfont'), url('../fonts/segoeui.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url('../fonts/segoeuil.eot');
+    src: local('☺'), url('../fonts/segoeuil.eot#iefix') format('embedded-opentype'), url('../fonts/segoeuil.ttf') format('truetype'), url(../fonts/segoeuil.woff) format('woff'), url(../fonts/segoeuil.svg) format('svg'), url('../fonts/segoeuil.pfb') format('pfb'), url('../fonts/segoeuil.dfont') format('dfont'), url('../fonts/segoeuil.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url('../fonts/segoeuib.eot');
+    src: local('☺'), url('../fonts/segoeuib.eot#iefix') format('embedded-opentype'), url('../fonts/segoeuib.ttf') format('truetype'), url(../fonts/segoeuib.woff) format('woff'), url(../fonts/segoeuib.svg) format('svg'), url('../fonts/segoeuib.pfb') format('pfb'), url('../fonts/segoeuib.dfont') format('dfont'), url('../fonts/segoeuib.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+     font-family: "Segoe UI Light";
+}
+#all404{
+    width:100%;
+    left:0px;top:0px;
+    position: fixed;
+    z-index: 1;
+}
+#table404over{ 
+    position: absolute;left:50%;width:500px;
+    z-index: 4;color:#fff;margin-left: -150px;
+    text-align: left;
+    display: block;
+    top:50%;margin-top:-370px;
+}
+a{
+    color:#000;
+}
+#table404over h1{    font-family: Arial;
+    font-size:250px;font-weight: normal;line-height: 250px;
+    margin-left:-80px;margin-bottom: 0px;
+    margin-bottom:40px;color:#000;
+}
+#table404over h2{
+    font-size:25px;background: #fff;color:#000;
+    padding:8px;display: inline-block;*display:inline;*zoom:1;
+}
+#table404over a{
+    font-size:16px;background: #fff;color:#000;
+    padding:8px;
+}
+div.dotted{
+  width: 100%;height: 100%;left:0px;top:0px;
+position: absolute;  z-index: 3;
+background:url(../images/black_point_header_pict.png);
+display: block;
+}

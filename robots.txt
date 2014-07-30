@@ -1,0 +1,3 @@
+Disallow: /admin/
+Disallow: /ajax/
+Sitemap: http://www.liveuamap.com/sitemap.xml

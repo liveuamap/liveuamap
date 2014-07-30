@@ -1,0 +1,783 @@
+﻿body{padding:0px; margin:0px; font-family:Arial;
+background: #ffffff url(../../images/wf/bg_all.gif);
+}
+input[type="button"]{font:15px Arial}
+.dashed_underline_green{width:auto; font:13px Arial; color:#145628; cursor:pointer;}
+.header{position:fixed;width:100%; height:60px; border-bottom:2px solid #00a8bc; background: #ffffff url(../../images/wf/bg_all.gif); z-index:1005;}
+.header2{position:fixed;width:100%;top:62px; height:0px; border-top:2px solid #0072bc; background:#FFF; z-index:1005;}
+.header .time{position: absolute;
+width: 246px;
+height: 50px;
+border-bottom: 0px;
+left: 20px;
+top: -10px;
+font: 24px Arial;}
+.header .data_time_calendar{height:30px; width:390px;white-space: nowrap; font:17px Arial; position:relative; top:20px; }
+.lined{ text-decoration:line-through; font:12px Arial; color:#CCC;}
+
+.border{width:110px; padding:5px; background:#8fca82; text-align:center;  margin-top:10px;}
+.not_colored{width:110px; padding:5px; background:#F1ECDC; text-align:center; float:left; margin-top:10px;}
+.header .data_time_calendar #btn_left{position:absolute; left:0px; top:7px;  cursor:pointer;}
+.header .data_time_calendar #data_time{font:20px Arial; position:absolute; left:40px; cursor:pointer;}
+.header .data_time_calendar #data_time:hover{font:20px Arial; color:#990000; text-decoration:underline; cursor:pointer;}
+.header .data_time_calendar #data_calendar{position:absolute; right:30px; top:7px; cursor:pointer;}
+.header .data_time_calendar #btn_right{position:absolute; right:0px; top:7px;  cursor:pointer;}
+.header .remembers{position:absolute;height:20px; border-bottom:0px; width:115px;  height:35px;right:190px; top:14px; font:13px Arial;}
+.header .remembers a{font:13px Arial; color:black;}
+.header .remembers a:hover{font:13px Arial; color:#990000;}
+.header .remembers #text_remembers{font:11px Arial; color:#999; margin-left:15px;}
+.header .time_colored_select{position: absolute;
+margin-top: 20px;
+margin-left: 226px;
+left: 0px;}
+
+.Today{position:absolute;width:100px; height:33px; border-bottom:0px; top:19px; font:13px Arial; right:50px;}
+.Today a{font:13px Arial;color:#007700;}
+.Today a:hover{font:13px Arial;color:#990000;}
+.Today .today_h{position:absolute; left:10px; font:13px Arial; color:#007700;  text-decoration:underline;}
+.Today .data{position:absolute; left:10px; top:18px; font:11px Arial; color:#999; }
+
+.today_m{width:200px; min-height:36px;font:13px Arial;}
+.today_m .today_h{font:17px Arial; color:#007700;  margin-top:10px;}
+.today_m .data{position:absolute; width:100%; font:11px Arial; color:#999; }
+.today_m .t_menu_content{}
+
+.left_slide_menu{position:fixed; display:block; top:100px; left:-210px; width:200px; height:480px; background:#FFF; z-index:1000; padding-top:5px;}
+.left_slide_menu #_main{margin-top:0px; top:0px; padding:0px;}
+.left_slide_menu .menu_element{height:26px; width:150px; padding-top:10px; background:#FFF; padding-left:50px;  cursor:pointer; z-index:0;}
+.left_slide_menu .menu_element:hover{background:#b6ddf1; cursor:pointer; color:#000; z-index:10;}
+.left_slide_menu .menu_element img{margin-left:-30px;margin-right:10px;}
+.left_slide_menu .selected {background:#3883b3; cursor:pointer; color:#FFF;}
+.left_slide_menu .line{width:100%; height:1px; background:#999; margin:0px; margin-top:5px; margin-bottom:5px;}
+.left_slide_menu .margined{margin-top:20px;}
+
+.main{position:absolute; top:0px; margin-top:62px; width:100%; }
+.main .right_menu{position:fixed;overflow-y:scroll; width:160px; height:85%;right:0px;padding-bottom: 20px; top:62px; background:#f2f2f2; font:12px Arial;}
+.main .right_menu a{font:12px Arial; color:black;}
+.main .right_menu a:hover{font:12px Arial; color:#990000;}
+.main .right_menu .add_row{color:#145628; text-decoration:none;border-bottom:1px dashed #145628; }
+.main .right_menu .data_text{margin-top:7px; width:97px; margin-left:15px;  text-decoration:underline;}
+.main .reserved_to_menu{position:absolute;width:7px;/*50px;*/ height:100%; left:0px; background:#FFF;}
+.main .content{padding-left:50px;  padding-right:160px; display:block;}
+.main .content_2{padding-left:50px; padding-top:10px; padding-right:160px; display:none;}
+.main th{font:12px Arial; text-align:center; }
+    .main .content h1 {
+    font-size:25px;
+    }
+.create_new_priem_submit{margin-left:40px; margin-top:10px;}
+.underline{height:1px; width:100%; background:#BBB;}
+
+.new_priem{padding-left:50px; padding-top:40px; padding-right:180px; display:none;}
+.new_priem H1{font:22px Arial; color:black; margin:0px}
+.new_priem .underline{height:1px; width:1030px; background:#BBB;}
+.new_priem .priem_time{margin-left:250px; margin-top:20px; margin-bottom:40px; height:40px;}
+.new_priem .this_day{font:14px Arial; color:black; margin-left:150px;}
+.new_priem .new_priem_time{font:14px Arial; color:black; margin-left:150px; margin-bottom:15px;}
+.new_priem .new_priem_time .time_begin{float:left; font:18px Arial;}
+.new_priem .patien_type{font:14px Arial;font-style:italic; font-weight:bold; margin-left:250px;margin-right:40px; padding-bottom:40px;}
+.new_priem .patien_type p{margin:0px; color:#BBB;}
+.new_priem .patient{width:500px; margin-left:150px;}
+.new_priem .patien_type .patient .patient_fio{font:18px Arial; color:black; float:left; display:none;}
+.new_priem .patien_type .patient .patient_other{border-bottom:1px dashed; text-decoration:none; font:13px Arial; color:#145628; cursor:pointer; margin-left:310px; width:96px;  display:none;}
+.new_priem .patien_type .patient .patient_phone{font:18px Arial; color:black; clear:both; display:none;}
+.new_priem .patien_type .patient .patient_search{width:420px; margin-top:-2px}
+.new_priem .patien_type .patient .dropped_params{width:420px; left:0px; top:20px; position:absolute; border:1px solid #BBB; position:absolute; cursor:pointer; display:none;}
+.new_priem .patien_type .patient .patient_fio_input{display:block; position:relative;}
+.new_priem .patien_type .patient .patient_fio_input .dropped_params .no_results{font:12px Arial; color:#BBB; padding-top:10px; padding-left:10px; height:35px}
+.new_priem .patien_type .patient .patient_fio_input  .dropped_params .new_patient{font:12px Arial; color:#1C4FAF; height:20px; padding-top:5px; padding-left:10px; background:#FFF;}
+.new_priem .patien_type .patient .patient_fio_input  .dropped_params .patien_with_no_card{font:12px Arial; color:#1C4FAF; height:20px; padding-top:5px; padding-left:10px; background:#FFF;}
+.new_priem .patien_type .patient .patient_fio_input  .dropped_params .new_patient:hover{background:#D5DCEA;}
+.new_priem .patien_type .patient .patient_fio_input  .dropped_params .patien_with_no_card:hover{background:#D5DCEA;}
+.new_priem .patien_type .patient .patient_fio_input  .dropped_params .result{background:#FFF;}
+.new_priem .patien_type .patient .patient_fio_input  .dropped_params .result:hover{background:#D5DCEA;}
+
+.new_priem .priem_type{font:14px Arial; font-style:italic; font-weight:bold; width:300px; margin-left:250px;margin-right:40px; padding-bottom:40px;}
+.new_priem .priem_type_select{margin-left:150px;margin-right:40px;}
+.new_priem .priem_type_select .type_select{width:165px; margin-top:-2px;}
+
+
+.modal_w_rem{width:190px; font:12px Arial;}
+
+
+.new_priem .doctor{position:absolute; width:200px; height:140px; left:70px; margin-top:20px; font:16px Arial; color:black;}
+.new_priem .doctor .doctor_assistances{font:14px Arial;  margin-top:3px;font-style:italic; z-index:10;}
+.new_priem .doctor .doctor_assistances img{position:absolute; margin-left:-35x;}
+.new_priem .doctor .line_doctor{margin-top:3px; margin-bottom:15px; height:20px;}
+.new_priem .doctor .line_doctor .color{float:left; height:20px; width:25px; margin-left:0px; display:none; min-height:20px; padding-top:1px; text-align:center;}
+.new_priem .doctor .assistances{font:14px Arial; color:black;}
+.new_priem .doctor .line_doctor .fio{ /* border-bottom:1px dashed #0072bb; */ width:145px; font:13px Arial; color:#0072bb; cursor:pointer;display:none; margin-left:38px;}
+.new_priem .doctor .line_doctor .enabled{display:block;}
+
+.new_priem .doctor .line_doctor .fio_select{font:13px Arial; margin-left:5px; width:280px; font:12px Arial;}
+.new_priem .doctor .line_doctor .fio_selection{margin-left:0px; width:300px; height:90px; display:none; background:#F1ECDC; border:1px solid #BAAD85; font:12px Arial;}
+
+.new_priem .reminders{font:14px Arial; font-style:italic; font-weight:bold; margin-left:250px;margin-right:40px;}
+.new_priem .reminders table{width:660px; border-collapse:collapse;}
+.new_priem .reminders th{padding:0px; width:60px; border-bottom:1px solid #BBB;}
+.new_priem .reminders td{padding:0px; height:30px;}
+.new_priem .reminders tr{height:20px; background:#FFF;}
+.new_priem .reminders input{margin-left:15px}
+.new_priem .reminders .reminders_action{margin-left:0px; margin-top:0px; display:none; width:140px;}
+.new_priem .reminders div.reminders_action{margin-left:324px; margin-top:-13px; display:none; width:140px; padding:3px; background:#bcdaef;}
+.new_priem .add_reminder{border-bottom:1px dashed; font-style:italic; text-decoration:none; font:13px Arial; color:#145628; cursor:pointer; width:143px; margin-left: 370px; margin-top:10px;margin-bottom:10px; display:block;}
+
+.new_priem .reminders .lines{height:30px; background:#FFF;}
+.new_priem .reminders .lines:hover{height:30px; background:#f1ecdc;}
+.new_priem .reminders .lines_selecter{height:20px;  background:#bcdaef;}
+
+.new_priem .reminder_adding_panel{width:660px; height:80px;background:#f1ecdc; border:1px solid #baad85; margin-left:370px;  margin-bottom:30px; display:none; position:relative;}
+.new_priem .reminder_adding_panel .datas{width:70px; top:10px;left:20px; }
+.new_priem .reminder_adding_panel .hour{width:45px; top:10px;left:110px; }
+.new_priem .reminder_adding_panel .minute{width:45px; top:10px;left:170px;}
+.new_priem .reminder_adding_panel .msg{width:350px; top:10px; left:270px;}
+.new_priem .reminder_adding_panel .cancel{width:100px;}
+.new_priem .reminder_adding_panel .add_rem{width:100px;}
+.new_priem .reminder_adding_panel .msg{width:350px;top:10px;  left:250px;}
+.new_priem .reminder_adding_panel .border{width:110px; padding:5px; background:#8fca82; text-align:center; float:left; top:30px;}
+.new_priem .reminder_adding_panel .not_colored{width:110px; padding:5px; background:#F1ECDC; text-align:center; float:left; top:30px;}
+
+.new_priem  .cancel_saving_panel{width:1020px; position:relative; margin-top:5px; height:30px; padding-top:10px; padding-left:10px; float:left;  margin-bottom:30px; background:#ebebeb;}
+.new_priem  .saving_panel{position:absolute; width:100px; left:925px; top:0px; height:30px; padding-top:10px; padding-left:10px; background:#8FCA82;}
+
+
+/* ИЗМЕНЕНИЕ ПРИЕМА  */
+
+.CH_priem{padding-left:50px; padding-top:40px; padding-right:180px; display:none;}
+.CH_priem  H1{font:22px Arial; color:black; margin:0px; margin-left:20px;}
+.CH_priem  .CH_delete_priem{position:absolute; left:960px; top:45px; font:14px Arial; color:#F00;}
+.CH_priem .underline{height:1px; width:1030px; background:#BBB; margin-bottom:10px;}
+.CH_priem .priem_time{margin-left:250px; margin-top:20px; margin-bottom:40px; height:40px;}
+.CH_priem .this_day{font:14px Arial; color:black; margin-left:150px;}
+.CH_priem .rnew_priem_time{font:14px Arial; color:black; margin-left:150px; margin-bottom:15px;}
+.CH_priem .rnew_priem_time .time_begin{font:14px Arial;}
+.CH_priem .patien_type{font:13px Arial;margin-left:250px;margin-right:40px; padding-bottom:40px;}
+.CH_priem .patien_type p{margin:0px; color:#BBB;}
+.CH_priem .patient{width:500px; margin-left:150px;}
+.CH_priem .patien_type .patient .patient_fio{font:18px Arial; color:black; float:left; display:block; margin-top:-3px;}
+.CH_priem .patien_type .patient .patient_other{border-bottom:1px dashed; text-decoration:none; font:13px Arial; color:#145628; cursor:pointer; margin-left:310px; width:96px;  display:block; margin-top:-3px;}
+.CH_priem .patien_type .patient .patient_phone{font:18px Arial; color:black; clear:both; display:block;}
+.CH_priem .patien_type .patient .patient_search{width:420px; display:block;}
+.CH_priem .patien_type .patient .dropped_params{width:420px; border:1px solid #BBB; position:absolute; cursor:pointer; display:none;}
+.CH_priem .patien_type .patient .patient_fio_input{display:none;}
+.CH_priem .patien_type .patient .patient_fio_input .dropped_params .no_results{font:12px Arial; color:#BBB; padding-top:10px; padding-left:10px; height:35px}
+.CH_priem .patien_type .patient .patient_fio_input  .dropped_params .new_patient{font:12px Arial; color:#1C4FAF; height:20px; padding-top:5px; padding-left:10px; background:#FFF;}
+.CH_priem .patien_type .patient .patient_fio_input  .dropped_params .patien_with_no_card{font:12px Arial; color:#1C4FAF; height:20px; padding-top:5px; padding-left:10px; background:#FFF;}
+.CH_priem .patien_type .patient .patient_fio_input  .dropped_params .new_patient:hover{background:#D5DCEA;}
+.CH_priem .patien_type .patient .patient_fio_input  .dropped_params .patien_with_no_card:hover{background:#D5DCEA;}
+.CH_priem .patien_type .patient .patient_fio_input  .dropped_params .result{background:#FFF;}
+.CH_priem .patien_type .patient .patient_fio_input  .dropped_params .result:hover{background:#D5DCEA;}
+
+.CH_priem .balance_type{font:12px Arial; width:300px; margin-left:250px;margin-right:40px; padding-bottom:40px;}
+.CH_priem .balance_type .balance{margin-left:150px;margin-right:40px; width:80px; background:#D4ECDB; font:16px Arial; color:#145628; padding:5px;}
+
+.CH_priem .additional_type{font:12px Arial; width:300px; margin-left:250px;margin-right:40px; padding-bottom:40px;}
+.CH_priem .additional_type .additional{margin-left:150px;margin-right:40px; font:12px Arial;}
+
+
+.CH_priem .doctor{position:absolute; width:200px; height:140px; left:70px; top:90px; font:16px Arial; color:black;}
+.CH_priem .doctor .doctor_assistances{font:14px Arial;  margin-top:3px;font-style:italic; z-index:10;}
+.CH_priem .doctor .doctor_assistances img{position:absolute; margin-left:-35x;}
+.CH_priem .doctor .line_doctor{margin-top:3px; margin-bottom:15px; height:20px;}
+.CH_priem .doctor .line_doctor .color{float:left; height:20px; width:25px; margin-left:0px; display:none; min-height:20px; padding-top:1px; text-align:center;}
+.CH_priem .doctor .assistances{font:14px Arial; color:black;}
+.CH_priem .doctor .line_doctor .fio{/* border-bottom:1px dashed #0072bb; */ width:145px; font:13px Arial; color:#0072bb; cursor:pointer;display:none; margin-left:38px;}
+.CH_priem .doctor .line_doctor .enabled{display:block;}
+
+.CH_priem .doctor .line_doctor .fio_select{font:13px Arial; margin-left:5px; width:280px; font:12px Arial;}
+.CH_priem .doctor .line_doctor .fio_selection{margin-left:0px; width:300px; height:90px; display:none; background:#F1ECDC; border:1px solid #BAAD85; font:12px Arial;}
+
+.CH_priem .reminders{font:12px Arial; margin-left:250px;margin-right:40px;}
+.CH_priem .reminders table{width:660px; border-collapse:collapse;}
+.CH_priem .reminders th{padding:0px; width:60px; border-bottom:1px solid #BBB;}
+.CH_priem .reminders td{padding:0px; height:30px;}
+.CH_priem .reminders tr{height:20px; background:#FFF;}
+.CH_priem .reminders input{margin-left:15px}
+.CH_priem .reminders .reminders_action{margin-left:0px; margin-top:0px; display:none; width:140px;}
+.CH_priem .reminders div.reminders_action{margin-left:324px; margin-top:-13px; display:none; width:140px; padding:3px; background:#bcdaef;}
+.CH_priem .add_reminder{border-bottom:1px dashed; text-decoration:none; font:13px Arial; color:#145628; cursor:pointer; width:143px; margin-left: 370px; margin-top:10px;margin-bottom:10px; display:block;}
+
+.CH_priem .reminders .lines{height:30px; background:#FFF;}
+.CH_priem .reminders .lines:hover{height:30px; background:#f1ecdc;}
+.CH_priem .reminders .lines_selecter{height:20px;  background:#bcdaef;}
+
+.CH_priem .reminder_adding_panel{width:660px; height:80px;background:#f1ecdc; border:1px solid #baad85; margin-left:170px;  margin-bottom:30px; display:none; position:relative;}
+.CH_priem .reminder_adding_panel .datas{width:70px; top:10px;left:20px; }
+.CH_priem .reminder_adding_panel .hour{width:45px; top:10px;left:110px; }
+.CH_priem .reminder_adding_panel .minute{width:45px; top:10px;left:170px;}
+.CH_priem .reminder_adding_panel .msg{width:350px; top:10px; left:270px;}
+.CH_priem .reminder_adding_panel .cancel{width:100px;}
+.CH_priem .reminder_adding_panel .add_rem{width:100px;}
+.CH_priem .reminder_adding_panel .msg{width:350px;top:10px;  left:250px;}
+.CH_priem .reminder_adding_panel .border{width:110px; padding:5px; background:#8fca82; text-align:center; float:left; top:30px;}
+.CH_priem .reminder_adding_panel .not_colored{width:110px; padding:5px; background:#F1ECDC; text-align:center; float:left; margin-top:10px;}
+
+.CH_priem  .cancel_saving_panel{width:1000px; position:relative; margin-top:5px; height:30px; padding-top:10px; padding-left:10px; float:left;  margin-bottom:30px; background:#ebebeb;}
+.CH_priem  .saving_panel{position:absolute; width:100px; left:920px; top:0px; height:30px; padding-top:10px; padding-left:10px;background:#8fca82;}
+
+
+.finished_priem_non_colored{background:url('../../images/empty2x2.gif'); position:absolute; top:0px; z-index:5;}
+.finished_priem{background:url('../../images/over-white.png'); position:absolute; top:0px;}
+.finished_priem:hover{background:url('../../images/empty2x2.gif');}
+
+
+.ui-resizable-s{bottom:0px; cursor:s-resize;height:10px;left:0;width:100%;/*   background:#aaa; */  position:absolute; z-index:10;}
+
+.inp_bg{height:21px; width:107px; background:url("../../images/inpt/center.png"); position:absolute;}
+.inp_bg_l{height:21px; width:26px; background:url("../../images/inpt/left.png"); position:absolute; margin-left:-26px;}
+.inp_bg_r{height:21px; width:11px; background:url("../../images/inpt/right.png"); position:absolute;  margin-left:107px;}
+.input_search{height:18px; width:107px; border:0px; background:transparent;margin:2px 0px 1px 0px; margin-left:0px;padding:0px; font:14px Arial; color:#999;}
+.search_results{position:absolute; top:21px; width:140px; left:-26px; display:none; text-align:left; border:1px solid #959595; background:#FFF; z-index:10; }
+
+.cabinet{position:relative;	height:1040px; width:240px;}
+.thirty_minutes{margin-top:-8px;margin-bottom:8px;height:40px;width:35px;text-align:right;}
+.time_line{position:absolute;left:35px;float:left;height:1040px;width:35px;background:url("../../images/timeline/border.gif"); z-index:0;}
+.time_slider{margin-top:-8px;float:left;width:35px;}
+.time_black{padding-right:3px;padding-right:3px;font:11px Arial;color: black;}
+.time_lite{padding-right:3px;padding-right:3px;font:11px Arial;color:#CCC;}
+.initials{padding-left:15%;float:left;font:11px Arial;color: #898989;}
+.shedule{width:170px;height:1040px;margin-left:70px;}
+.color_line{width:20px;height:100%;min-height:40px;}
+.task{height:40px;min-height:40px; width:190px; position:relative;}
+.task:hover{background:#faf8df;}
+
+.patient_name{padding-left:4px;font:14px Arial;color: black;}
+.procedure{padding-left:4px;width:164px;font: 14px Arial;color: #707070; }
+.important_procedure{width:144px;padding-left:4px; font: 14px Arial;color: #707070;background:url("../../images/timeline/zebra.gif");}
+.txt{width:170px; margin-left: 19px;}
+
+.perenoska{position:fixed; bottom:0px; background:#dbd8d8; width:160px; height:auto; padding-left:1px; padding-right:1px;}
+.perenoska table{width:160px; background:#FFF; border-collapse:collapse; border:0px; height:68px;}
+.perenoska tr{height:25px; width:160px; text-align:left; position:relative; background:#FFF; font:13px Arial;}
+.perenoska th{height:15px; width:160px; text-align:left; position:relative; background:#dbd8d8;  font:12px Arial; padding-left:0px;}
+.perenoska .th {height:15px;}
+.perenoska td{padding-left:7px; padding-top:5px; padding-bottom:5px;}
+.perenoska .type{width:20px;}
+.perenoska .fio{width:75px;}
+.perenoska .time{width:35px; text-align:center;}
+.perenoska .fio_with_hidden{position:relative; overflow:hidden; max-width:75px; width:75px;}
+.perenoska .shedule_colored{min-height:15px; max-height:15px; text-align:center; width:25px; font:13px Arial;}
+.perenoska table .transparent {position:absolute; top:0px; right:0px; width:19px;height:20px;  background:url("../../images/perenoska/familia-over.png");}
+.perenoska .perenoska_elem_count{ font:12px Arial; color:#898989; margin-left:105px;}
+
+.modal_bg{position:fixed; width:100%; height:100%; display:none; background:url("../../images/perenoska/modal-bg.png"); z-index:1010;}
+.modal_w{
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;padding:15px;
+-webkit-box-shadow: 0px 0px 2px 5px rgba(88, 88, 88, 0.6);
+box-shadow: 0px 0px 2px 5px rgba(88, 88, 88, 0.6);
+
+    position:fixed; padding-left:25px; left:0px; width:390px; height:400px; display:none; z-index:2000; background:#FFFFFF;}
+
+.modal_w .MW_new_priem_time{margin-top:10px; height:30px; font:18px Arial; margin-left:-10px}
+.modal_w .MW_time_begin{float:left;}
+.modal_w .MW_time_end{float:left;}
+.modal_w .MW_patient{margin-top:10px; margin-left: 30px;}
+.modal_w .MW_head{font:14px Arial; margin-bottom:10px;}
+.modal_w .MW_fio{font:18px Arial;}
+.modal_w .MW_phone{font:18px Arial;}
+.modal_w .MW_rem{margin-left: 15px; margin-top:20px; font:14px Arial;}
+.modal_w .MW_rem_loaded{overflow:auto; height:170px;}
+.modal_w .MW_P_type{font:12px Arial; color:#CCC;}
+.modal_w .MW_PANEL{width:400px; height:30px; margin-left:-10px;
+                    position:absolute; top:390px; position:absolute;}
+
+
+.modal_w #modal_top_sh{position:absolute; width:380px; height:14px; top:-14px; left:10px; background:url('../../images/modal_w/sh-top.png');}
+.modal_w #modal_bottom_sh{position:absolute; width:380px; height:14px; top:400px; left:10px; background:url('../../images/modal_w/sh-bottom.png');}
+.modal_w #modal_left_sh{position:absolute; width:14px; height:357px; top:22px; left:-24px; background:url('../../images/modal_w/sh-left.png');}
+.modal_w #modal_right_sh{position:absolute; width:14px; height:357px; top:22px; left:410px; background:url('../../images/modal_w/sh-right.png');}
+
+.modal_w #modal_left_top_sh{position:absolute; width:35px; height:35px; top:-13px; left:-25px; background:url('../../images/modal_w/sh-l-t.png');}
+.modal_w #modal_right_top_sh{position:absolute; width:35px; height:35px; top:-13px; left:390px; background:url('../../images/modal_w/sh-r-t.png');}
+.modal_w #modal_right_bottom_sh{position:absolute; width:35px; height:35px; top:379px; left:390px; background:url('../../images/modal_w/sh-r-b.png');}
+.modal_w #modal_left_bottom_sh{position:absolute; width:35px; height:35px; top:379px; left:-25px; background:url('../../images/modal_w/sh-l-b.png');}
+
+.modal_w #modal_i_right_top_sh{position:absolute; width:10px; height:10px; top:0px; left:400px; background:url('../../images/modal_w/r-t.png');}
+.modal_w #modal_i_right_bottom_sh{position:absolute; width:10px; height:10px; top:390px; left:400px; background:url('../../images/modal_w/r-b.png');}
+.modal_w #modal_i_left_top_sh{position:absolute; width:10px; height:10px; top:0px; left:-10px; background:url('../../images/modal_w/l-t.png');}
+.modal_w #modal_i_left_bottom_sh{position:absolute; width:10px; height:10px; top:390px; left:-10px; background:url('../../images/modal_w/l-b.png');}
+
+.modal_w #modal_i_left_white{position:absolute; width:10px; height:380px; top:10px; left:-10px; background:#FFF;}
+.modal_w #modal_i_right_white{position:absolute; width:10px; height:380px; top:10px; left:400px; background:#FFF;}
+
+.modal_w_small{position:fixed; top:0xp; left:0px; width:280px; height:200px; display:none; z-index:2000; background:#FFFFFF;}
+.modal_w_small #modal_top_sh{position:absolute; width:260px; height:14px; top:-14px; left:10px; background:url('../../images/modal_w/sh-top.png');}
+.modal_w_small #modal_bottom_sh{position:absolute; width:260px; height:14px; top:200px; left:10px; background:url('../../images/modal_w/sh-bottom.png');}
+.modal_w_small #modal_left_sh{position:absolute; width:14px; height:157px; top:22px; left:-24px; background:url('../../images/modal_w/sh-left.png');}
+.modal_w_small #modal_right_sh{position:absolute; width:14px; height:157px; top:22px; left:290px; background:url('../../images/modal_w/sh-right.png');}
+
+.modal_w_small #modal_left_top_sh{position:absolute; width:35px; height:35px; top:-13px; left:-25px; background:url('../../images/modal_w/sh-l-t.png');}
+.modal_w_small #modal_right_top_sh{position:absolute; width:35px; height:35px; top:-13px; left:270px; background:url('../../images/modal_w/sh-r-t.png');}
+.modal_w_small #modal_right_bottom_sh{position:absolute; width:35px; height:35px; top:179px; left:270px; background:url('../../images/modal_w/sh-r-b.png');}
+.modal_w_small #modal_left_bottom_sh{position:absolute; width:35px; height:35px; top:179px; left:-25px; background:url('../../images/modal_w/sh-l-b.png');}
+
+.modal_w_small #modal_i_right_top_sh{position:absolute; width:10px; height:10px; top:0px; left:280px; background:url('../../images/modal_w/r-t.png');}
+.modal_w_small #modal_i_right_bottom_sh{position:absolute; width:10px; height:10px; top:190px; left:280px; background:url('../../images/modal_w/r-b.png');}
+.modal_w_small #modal_i_left_top_sh{position:absolute; width:10px; height:10px; top:0px; left:-10px; background:url('../../images/modal_w/l-t.png');}
+.modal_w_small #modal_i_left_bottom_sh{position:absolute; width:10px; height:10px; top:190px; left:-10px; background:url('../../images/modal_w/l-b.png');}
+
+.modal_w_small #modal_i_left_white{position:absolute; width:10px; height:180px; top:10px; left:-10px; background:#FFF;}
+.modal_w_small #modal_i_right_white{position:absolute; width:10px; height:180px; top:10px; left:280px; background:#FFF;}
+.modal_w_small .create_new_busy_time{padding-top:10px; width:280px;}
+.modal_w_small .create_new_busy_time th{border-bottom:1px solid #CCC; text-align:left; margin-bottom:20px;}
+.modal_w_small .create_new_busy_time tr{height:30px;}
+
+
+
+.modal_w_small .create_new_busy_time p{ margin:0px; height:26px;background:#FFF; padding-top:4px; cursor:pointer;}
+.modal_w_small .create_new_busy_time input{cursor:pointer;}
+
+.modal_w_small .create_new_busy_time .inpt{position:absolute; left:160px; top:155px; width:110px; text-align:center; height:28px; padding-top:7px; background:#8fca82;}
+.modal_w_small .create_new_busy_time .inpt input{width:95px;}
+
+
+.modal_w_official{position:fixed; top:0xp; left:0px; width:280px; height:200px; display:none; z-index:2000; background:#FFFFFF;}
+.modal_w_official #modal_top_sh{position:absolute; width:260px; height:14px; top:-14px; left:10px; background:url('../../images/modal_w/sh-top.png');}
+.modal_w_official #modal_bottom_sh{position:absolute; width:260px; height:14px; top:200px; left:10px; background:url('../../images/modal_w/sh-bottom.png');}
+.modal_w_official #modal_left_sh{position:absolute; width:14px; height:157px; top:22px; left:-24px; background:url('../../images/modal_w/sh-left.png');}
+.modal_w_official #modal_right_sh{position:absolute; width:14px; height:157px; top:22px; left:290px; background:url('../../images/modal_w/sh-right.png');}
+
+.modal_w_official #modal_left_top_sh{position:absolute; width:35px; height:35px; top:-13px; left:-25px; background:url('../../images/modal_w/sh-l-t.png');}
+.modal_w_official #modal_right_top_sh{position:absolute; width:35px; height:35px; top:-13px; left:270px; background:url('../../images/modal_w/sh-r-t.png');}
+.modal_w_official #modal_right_bottom_sh{position:absolute; width:35px; height:35px; top:179px; left:270px; background:url('../../images/modal_w/sh-r-b.png');}
+.modal_w_official #modal_left_bottom_sh{position:absolute; width:35px; height:35px; top:179px; left:-25px; background:url('../../images/modal_w/sh-l-b.png');}
+
+.modal_w_official #modal_i_right_top_sh{position:absolute; width:10px; height:10px; top:0px; left:280px; background:url('../../images/modal_w/r-t.png');}
+.modal_w_official #modal_i_right_bottom_sh{position:absolute; width:10px; height:10px; top:190px; left:280px; background:url('../../images/modal_w/r-b.png');}
+.modal_w_official #modal_i_left_top_sh{position:absolute; width:10px; height:10px; top:0px; left:-10px; background:url('../../images/modal_w/l-t.png');}
+.modal_w_official #modal_i_left_bottom_sh{position:absolute; width:10px; height:10px; top:190px; left:-10px; background:url('../../images/modal_w/l-b.png');}
+
+.modal_w_official #modal_i_left_white{position:absolute; width:10px; height:180px; top:10px; left:-10px; background:#FFF;}
+.modal_w_official #modal_i_right_white{position:absolute; width:10px; height:180px; top:10px; left:280px; background:#FFF;}
+.modal_w_official .create_new_busy_time .inpt{position:absolute; left:160px; top:145px; width:110px; text-align:center; height:28px; padding-top:7px; background:#8fca82;}
+
+
+.content{padding-top:10px; left:0px; padding-left:60px; padding-right:260px; display:block;}
+.content .plan_top .plan_top_header{font:20px Arial; margin-top:20px; margin-bottom:20px;}
+.content .plan_top .plan_top_header_table{margin-top:0px; margin-bottom:40px;}
+
+.content .plan_top .plan_top_header_table .td_info{font:16px Arial; color:#898989; text-align:right; padding:0px;}
+.content .plan_top .plan_top_header_table .td_info_1{width:auto;padding-right:4px;vertical-align: top;}
+.content .plan_top .plan_top_header_table .td_info_2{width:130px;}
+.content .plan_top .plan_top_header_table .td_patient{font:14px Arial;}
+    .content .plan_top .plan_top_header_table .td_patient select {
+    width:300px;
+    }
+.content .plan_top .plan_top_header_table .td_template{font:14px Arial;}
+.content .plan_top .plan_top_header_table .patient_fio{font-size:16px}
+.content .plan_top .plan_top_header_table .plan_top_header_a{font:12px Arial; color:#20499a;}
+
+.content .plan_variant_header{padding:0px; border-collapse:collapse; width:960px;}
+.content .plan_variant_header .Rvariant{padding-bottom:2px;cursor:pointer;text-align:center;width:150px; background:#FFF; border-bottom:0px; border-top:1px solid #CCC; border-left:1px solid #CCC; border-right:1px solid #CCC;font-size:12px}
+.content .plan_variant_header .R_ACTIVE{border:0px; background:#EBEBEB;}
+.content .plan_variant_header .RV_FREE{width:20px;}
+.content .plan_variant_header td{padding:0px; vertical-align:top;}
+.content .plan_variant_header .variant{display:block;margin-bottom:4px; width:245px;   padding-top:10px; font:16px Arial; color:#20499a; text-decoration:underline; font-weight:normal; cursor:pointer;}
+.content .plan_variant_header .selected{color:black;  text-decoration:none; font-weight:bold;  float:left;}
+.content .plan_variant_header .del_variant{height:35px; font:12px Arial;padding-top:10px; text-decoration:underline; cursor:pointer; color:#20499a; display:none;}
+.content .plan_variant_header .del_selected{display:block;}
+.content .plan_variant_header .variant_money_summ{font:12px Arial; color:#777; position:absolute; margin-left:18px; margin-top:30px;}
+.content .plan_variant_header .money_selected{margin-top:-15px;}
+
+.content .plan_variant_header .del_variant_question{font:12px Arial; display:none;}
+.content .plan_variant_header .del_variant_question img{padding-bottom:15px;}
+.content .plan_variant_header .del_q_selected{position:absolute; background:url("../../images/plan/del_popup.png");  width:97px; height:82px; margin-left:100px; margin-top:-45px;  padding-top:10px; padding-bottom:10px; padding-left:13px; display:block; z-index:1000; }
+.content .plan_variant_header .del_variant_question_yes{position:absolute; font:12px Arial; color:#20499a; text-decoration:underline; float:left; cursor:pointer; top:65px}
+.content .plan_variant_header .del_variant_question_no{position:absolute; font:12px Arial; color:#20499a; text-decoration:underline; cursor:pointer; top:65px; margin-left:40px;}
+.content .plan_variant_header .add_variant{width:120px; height:33px; padding-left:20px; padding-top:12px; font:12px Arial; color:#145628;  text-decoration:underline; font-weight:normal; cursor:pointer;}
+
+.content .etap .del_etap{font:12px Arial;margin-top:15px; text-decoration:underline; cursor:pointer; color:#20499a; display:none;}
+.content .etap .del_etap_question{font:12px Arial; margin-top:10px; display:none;}
+.content .etap .del_etap_question .del_etap_question{position:absolute;  width:100px; padding-top:10px; padding-bottom:10px; z-index:1000; padding-left:20px; background:#fcfbf7; display:block;}
+.content .etap .del_etap_question .del_etap_question_yes{position:absolute; font:12px Arial; color:#20499a; text-decoration:underline; float:left; cursor:pointer; margin-top:10px;}
+.content .etap .del_etap_question .del_etap_question_no{position:absolute; font:12px Arial; color:#20499a; text-decoration:underline; cursor:pointer; margin-top:10px; margin-left:40px;}
+
+.content .add_etap {font:13px Arial; margin-top:15px; display:block; margin-bottom:20px; color:#145628; text-decoration:underline; cursor:pointer;}
+
+.content .template_header{height:60px; width:942px; background:#EBEBEB; z-index:0;  margin-bottom:20px; width:960px; padding-top:10px; padding-left:18px;}
+.content .template_header .template_info{font:14px Arial; float:left; margin-right:10px; }
+.content .template_header .template_name{font:14px Arial; float:left; margin-right:10px;}
+.content .template_header .template_name_select_a{display:table-cell;  font:14px Arial; color:#20499A; text-decoration:underline; cursor:pointer;}
+.content .template_header .template_name_select{display:none; margin-right:10px; float:left; }
+.content .template_header .template_name_select_OK{display:none; font:14px Arial; color:#20499A; text-decoration:underline; cursor:pointer;}
+.content .template_header .devider{margin-bottom:10px; }
+
+.content .template_header .object_info{font:14px Arial; float:left; margin-right:10px; }
+.content .template_header .object_name{font:14px Arial; margin-right:10px; float:left; }
+.content .template_header .object_name_select_a{display:table-cell; font:14px Arial; color:#20499A; text-decoration:underline; cursor:pointer;}
+.content .template_header .object_name_select{display:none; margin-right:10px; float:left; }
+.content .template_header .object_name_select_a_OK{display:none;  font:14px Arial; color:#20499A; text-decoration:underline; cursor:pointer;}
+.content .template_header .not_selected{color:#666; text-decoration:none; cursor:default;}
+.content .template_header .confirm_OK{position:absolute; display:block; margin-top:15px; margin-left:550px; }
+.content .template_header .confirmed{position:absolute; display:none; margin-top:15px; margin-left:550px; }
+
+
+.right_menu{z-index:10};
+
+.content .plan{margin-left:60px;}
+.content .plan .etap_table {border-collapse:collapse; width:900px;}
+.content .plan .etap_table tr,td{padding:0px;}
+.content .plan .etap_table .etap {width:62px; vertical-align:top;}
+.content .plan .etap_table .T_plan {width:900px; padding-top:30px;}
+.content .plan .etap_table .T_plan .free{height:60px;}
+.content .plan .etap_table .T_plan .free td:hover{}
+
+.content .plan .etap_table .T_plan .edit_menu{position:absolute; width:133px; height:40px; margin-top:-50px;  margin-left:760px;}
+.content .plan .etap_table .T_plan .edit_menu div{display:none; width:133px;height:22px; background:#C4DCE6; padding:5px;}
+.content .plan .etap_table .T_plan .edit_menu div select{width:133px;}
+
+.content .plan .etap_table table tr td{padding:0px; margin-top:-1px;}
+.content .plan .etap_table .etap_free{width:60px;}
+.content .plan .etap_table .etap_free div{position:absolute; border-bottom:1px solid #CCC; margin-left:-60px; width:900px; height:1px; margin-top:29px;}
+
+
+.content .plan .etap_table table{width:670px; border-collapse:collapse;}
+.content .plan .etap_table table tr{height:30px;}
+.content .plan .etap_table .etap_manipulation .tr_header td{/* border-bottom:1px solid #CCC; */ font:13px Arial; font-weight:bold;}
+.content .plan .etap_table .etap_manipulation .tr_header:hover{background:#FFF;}
+.content .plan .etap_table .free_tr {height:10px; background:#FFF;}
+.content .plan .etap_table .free_tr:hover {height:10px; background:#FFF;}
+.content .plan .etap_table .etap_manipulation table tr{background:#FFF;}
+.content .plan .etap_table .etap_manipulation tr:hover{background:#f1ecdc;}
+.content .plan .etap_table .etap_manipulation .add_manipulation{background:#FFF; margin-left:50px; display:none;}
+.content .plan .etap_table .etap_manipulation .add_manipulation:hover{background:#FFF;}
+.content .plan .etap_table .etap_manipulation .all{background:#FFF; padding-left:50px;}
+.content .plan .etap_table .etap_manipulation .all .title{text-align:right; font:14px; font-weight:bold;}
+.content .plan .etap_table .etap_manipulation .all:hover{background:#FFF;}
+
+.content .plan .etap_table  .input_etap_td{width:35px; text-align:center;}
+.content .plan .etap_table  .number_etap_td{width:70px; text-align:center;}
+.content .plan .etap_table  .manipulation_etap_td{width:170px; text-align:left;}
+.content .plan .etap_table  .price_etap_td{width:130px; text-align:right;}
+.content .plan .etap_table  .count_etap_td{width:140px; text-align:center;}
+.content .plan .etap_table  .summary_price_etap_td{width:125px; text-align:right;}
+.content .plan .etap_table  .add_manipulation{ width:145px; font:13px Arial; color:#145628; text-decoration:none; border-bottom:1px dashed #145628; cursor:pointer;}
+.content .border_line{padding-top:10px; margin-top:20px; height:30px; background:#EBEBEB; display:block; width:960px; }
+.content .manipulation_count{width:30px; border:0px; text-align:center;}
+
+
+.content .plan .etap_table .not_add_manipulation{width:150px; text-align:center; background:#ebebeb;padding:5px; font:13px Arial; color:#20499a; text-decoration:underline; cursor:pointer; display:none;}
+.content .plan .etap_table .adding_manipulation_menu{position:absolute; width:560px; height:80px; background:#ebebeb; padding:10px; display:none; font:13px Arial;}
+.content .plan .etap_table .adding_manipulation_menu .manipulation_name_add{width:300px;}
+.content .plan .etap_table .adding_manipulation_menu .manipulation_count_add{width:100px;}
+.content .plan .etap_table .adding_manipulation_menu .OK_Add_manipulation_plus{margin-top:25px; margin-left:380px;}
+.content .plan .etap_table .adding_manipulation_menu .OK_Add_manipulation{margin-top:25px; margin-left:20px;}
+.content .plan .etap_table .adding_manipulation_menu .list_of_manipulations{display:none; position:absolute; z-index:1001; background:#FFF; overflow:auto; border:1px solid #CCC;  height:60px; width:335px;}
+.content .plan .etap_table .adding_manipulation_menu .list_of_manipulations table{display:block; width:315px;}
+.content .plan .etap_table .adding_manipulation_menu .list_of_manipulations tr{ height:25px;}
+.content .plan .etap_table .adding_manipulation_menu .list_of_manipulations td{width:315px; cursor:pointer}
+.content .plan .etap_table .adding_manipulation_menu .list_of_manipulations tr:hover{width:315px; cursor:pointer}
+
+
+.content .plan .etap_table .etap_variant_header td{vertical-align:top;}
+.content .plan .etap_table .etap_variant_header .Rvariant{width:101px; vertical-align:top;}
+.content .plan .etap_table .etap_variant_header .E_variant{width:100px; height:30px; padding-left:20px; padding-top:10px; font:16px Arial; color:#20499a; background:#FFF; text-decoration:underline; font-weight:normal; cursor:pointer;}
+.content .plan .etap_table .etap_variant_header .E_selected{color:black; background:#f5f2e6; text-decoration:none; font-weight:bold; cursor:default;}
+.content .plan .etap_table .etap_variant_header .E_del_variant{font:12px Arial;padding-top:5px; text-decoration:underline; cursor:pointer; color:#20499a; padding-left:20px; display:none;}
+.content .plan .etap_table .etap_variant_header .E_del_selected{background:#fcfbf7; padding-bottom:10px; display:block; width:100px;}
+.content .plan .etap_table .etap_variant_header .E_add_variant{width:120px; height:30px; padding-left:20px; padding-top:12px; font:12px Arial; color:#145628; background:#FFF; text-decoration:underline; font-weight:normal; cursor:pointer;}
+
+.content .plan .etap_table .etap_variant_header .E_del_variant_question{position:absolute;  width:100px; padding-top:10px; padding-bottom:10px; z-index:1000; padding-left:20px; background:#fcfbf7; display:none; height:40px;}
+.content .plan .etap_table .etap_variant_header .E_del_variant_question .E_del_variant_question_yes{position:absolute; font:12px Arial; color:#20499a; text-decoration:underline; float:left; cursor:pointer; margin-top:10px;}
+.content .plan .etap_table .etap_variant_header .E_del_variant_question .E_del_variant_question_no{position:absolute; font:12px Arial; color:#20499a; width:25px; text-decoration:underline;float:left; cursor:pointer; margin-top:10px; margin-left:40px;}
+
+.summ_price_txt{float:left; font:16px Arial; font-weight:bold; margin-left:480px;}
+.summ_price{font:16px Arial;margin-left:700px; padding-right:165px; text-align:right;}
+
+.bottom_menu{width:960px; height:32px; background:#ebebeb; border-top:1px solid #DDD; margin-bottom:40px; padding-top:8px;}
+.bottom_menu .not_save{float:left; margin-left:10px;}
+.bottom_menu .into_template{float:left; margin-left:170px;}
+.bottom_menu .green_border{float:left; margin-left:300px; background:#90cb82; height:32px;padding-top:8px; margin-top:-8px; width:110px; padding-left:10px;}
+.bottom_menu .green_border .save{}
+.bottom_menu .to_print{float:left; margin-left:20px;}
+
+
+.patient_other_add{display:none; width:400px; }
+.list_patient_other{display:none; width:400px; position:absolute; z-index:1001; background:#FFF; overflow:auto; border:1px solid #CCC;  height:80px;}
+.list_patient_other table{display:block; width:382px;}
+.list_patient_other tr{ height:25px;}
+.list_patient_other td{width:382px; cursor:pointer}
+.list_patient_other tr:hover{width:382px; cursor:pointer; background:#f1ecdc;}
+
+.template_other_add{display:none; width:250px; }
+.list_template_other{display:none; width:250px; position:absolute; z-index:1001; background:#FFF; overflow:auto; border:1px solid #CCC;  height:80px;}
+.list_template_other table{display:block; width:232px;}
+.list_template_other tr{ height:25px;}
+.list_template_other td{width:232px; cursor:pointer}
+.list_template_other tr:hover{width:232px; cursor:pointer; background:#f1ecdc;}
+
+.obj_other_add{display:none; width:250px; }
+.list_obj_other{display:none; width:250px; position:absolute; z-index:1001; background:#FFF; overflow:auto; border:1px solid #CCC;  height:80px;}
+.list_obj_other table{display:block; width:232px;}
+.list_obj_other tr{ height:25px;}
+.list_obj_other td{width:232px; cursor:pointer}
+.list_obj_other tr:hover{width:232px; cursor:pointer; background:#f1ecdc;}
+
+
+* {font-family:Arial;
+}
+body {
+}
+ a {
+color: #21759b;font-family:Arial;
+}
+div.oneall_social_login a {
+    width: 35px;
+    height: 35px;
+    background-image: url("../images/sprite_35_35.png");
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9998;
+    outline: 0;
+}
+#login h1 {
+    white-space:nowrap;margin-bottom:15px;
+}
+
+#fblogin {
+background-position: -76px -1px;
+}
+#vklogin {
+background-position: -631px -1px;
+}
+
+div.content {
+}
+
+div.err {
+    display: block;
+    margin-left: 80px;
+    height: 120px;
+    margin-top: 150px;
+}
+
+    div.err a {
+        margin-top: 10px;
+        display: block;
+    }
+
+    div.err h1 {
+        font-size: 100px;
+    }
+input.input_search[type="text"]{
+outline:none;
+}
+.left_slide_menu {
+border:1px solid #000;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+div.filter {
+font-size:12px;
+margin-top:10px;
+margin-left:1px;
+}
+#modal_select.modal_w .MW_rem_loaded {
+    height:220px;
+}
+#modal_select .modal_w_rem {
+width:auto;
+}
+#errortext {
+font-size:16px;line-height:19px;
+padding-top:10px;
+}
+#showerror.modal_w {
+height:220px;
+}
+#showerror.modal_w .MW_PANEL {
+    top: 190px;
+}
+input[type=text].error {
+    background:#ffe3c2;
+}
+div.qq-uploader {
+display:inline-block;*display:inline;*zoom:1;
+}
+#pastecode ,#fileup{
+margin-left:3px;
+}
+ul.qq-upload-list {
+display:none;
+}
+div.orderstatus {
+    display:inline-block;*display:inline;*zoom:1;
+    padding:3px;
+    margin-left:40px;
+    font-size:14px;
+    color:#ffd800;
+}
+.content .plan_top .plan_top_header_table td {
+padding:4px;
+}
+.header .remembers {
+width: 215px;top:18px;right: 117px;
+}
+    .header .remembers div {
+        display:inline-block;*display:inline;*zoom:1;
+        margin-left:10px;
+        vertical-align:middle;
+    }
+.content .template_header {
+    width: 966px;
+    height:auto;
+    padding-bottom:20px;
+}
+div.actionsmenu {
+text-align:right;
+padding-right:20px;
+}
+div.etaptime {
+     display:inline-block;*display:inline;*zoom:1;
+     margin-left:500px;font-size:14px;
+}
+div.status {
+font-size:12px;
+margin-left:10px;     display:inline-block;*display:inline;*zoom:1;
+}
+    div.status.statusno {
+    color:#990000;
+    }
+table.table_etaps {
+}
+
+.content .plan_top .plan_top_header_table.table_etaps td {
+       padding-top:12px;
+    padding-bottom:12px;
+}
+textarea.notate {width: 330px; height: 22px;
+}
+
+.content .plan_top .plan_top_header_table.table_etaps td.steps {
+padding-left:30px;
+}
+    .content .plan_top .plan_top_header_table.table_etaps td.steps a {
+        margin-right:10px;
+    }
+        .content .plan_top .plan_top_header_table.table_etaps td.steps a img {
+        vertical-align:middle;margin-right:3px;
+        }
+#bigmap {
+width: 940px; height: 600px;margin-left:10px;margin-bottom:70px;
+margin-top:40px;
+}
+#bignote {
+    width:920px;height:400px;padding:10px;margin-top:10px;
+}
+#orderstable {
+
+}
+.flexigrid {
+margin-top:0px;margin-right:20px;
+}
+
+.header .time a.logotiplink {
+background: url(../../images/logo.png) no-repeat;
+background-size:contain;
+width: 246px;
+height: 41px;
+display: inline-block;
+margin-top: 20px;
+}
+.main .content textarea{
+    height:200px;width:600px;
+}
+.main .content input[type=text] {
+    width: 300px;
+    font-size:15px;
+    padding:3px;
+}
+.main .content tr.parent td {
+font-weight:bold;
+}
+
+.content .plan_top .plan_top_header div.controls {
+display:inline-block;*display:inline;*zoom:1;
+position:fixed;
+right:180px;
+}
+.content .plan_top .plan_top_header_table .td_info.td_info_header {
+text-align:left;color:#000;font-size:14px;border-bottom:1px solid #ccc;padding:5px;
+}
+a.backlink {
+font-size:12px;
+}
+#adactions {
+    font-size: 12px;margin-left:6px;
+}
+    #adactions div {
+    display:inline-block;*display:inline;*zoom:1;
+    vertical-align:top;margin-top:5px;
+    }
+.main .content div.searchfield {
+margin-top:10px;
+}
+
+div.lang_height {
+height: 80px;margin-top:20px;
+}
+.lang_block_menu div {
+float: left;
+padding: 15px;
+}
+.over_lang {
+background: #605f59;
+color: white;
+}
+.lang_block_menu a {
+font-size: 14px;
+text-decoration: none;
+border-bottom: 1px dashed;
+}
+.content .plan_top .plan_top_header_table .td_patient textarea{
+    height:200px;width:600px;
+}
+.content .plan_top .plan_top_header_table .td_patient input[type=text] {
+    width: 300px;
+    font-size:15px;
+    padding:3px;
+}
+div.bal {
+display: inline-block;
+padding: 14px 20px 14px 20px;
+color: #ffffff;
+background: #00b1f3;cursor:pointer;
+text-decoration: none;
+}
+
+.content .plan_top .plan_top_header_table .td_patient div.imgstable textarea{
+    width:308px;
+    height:50px;
+}
+.content .plan_top .plan_top_header_table .td_patient div.imgstable input[type=text]{
+     width:308px;
+}
+.content .plan_top .plan_top_header_table .td_patient div.imgstable div.row{
+    vertical-align:top;margin-top:20px;
+}
+.content .plan_top .plan_top_header_table .td_patient div.imgstable div.row.displayinlined{
+      display:inline-block;*display:inline;*zoom:1;
+}
+.content .plan_top .plan_top_header_table .td_patient div.imgstable span{
+    display:inline-block;*display:inline;*zoom:1;
+    width:100px;vertical-align:top;
+}
+.content .plan_top .plan_top_header_table .td_patient div.imgstable div.row div{
+    display:inline-block;*display:inline;*zoom:1;vertical-align:top;
+    margin-right:10px;margin-bottom:10px;
+}
+.content .plan_top .plan_top_header_table .td_patient div.imgstable div.row div div{
+    margin-bottom:5px;display:block;
+}
+.main .content .adtablelittle input[type=text]{
+    width:85px;
+}
