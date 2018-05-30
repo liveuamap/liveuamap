@@ -67,6 +67,7 @@ function save_image($inPath,$outPath)
       <description><?php WRA::e(htmlspecialchars($a0->name));?></description>
       <pubDate><?php WRA::e( date('D, d M Y g:i:s O', $a0->time));?></pubDate>
       <guid><?php WRA::e($a0->getlink()); ?></guid>
+      <georss:point><?php WRA::e($a0->lat.' '.$a0->lng);?></georss:point>
       <?php if(!empty($a0->picture)){
           $ext = str_replace(':large','',pathinfo($a0->picture, PATHINFO_EXTENSION));
           $link='http://liveuamap.com/uploads/'.$a0->id.'.'.$ext;
